@@ -9,6 +9,122 @@
     <script defer src="./assets/index.js"></script>
 </head>
 <body>
+    <main class="main-wrapper">
+        <h2 class="contact-form-header">Contact form</h2>
+        <p class="constact-form-caption">Please fill in your information and we'll be sending your order.</p>
+        <form id="form">
+            <label class="label-item">
+                <span class="label-caption">Your name</span>
+                <span class="label-input input-two-pcs">
+                    <input 
+                        type="text" 
+                        name="first-name" 
+                        placeholder="First name" 
+                        minlength="2" 
+                        maxlength="40" 
+                        pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?" 
+                        autocomplete="given-name"
+                        required 
+                        autofocus
+                        class="form-element">
+                    <input 
+                        type="text" 
+                        name="last-name" 
+                        placeholder="Last name" 
+                        minlength="2" 
+                        maxlength="40" 
+                        pattern="[A-Z][a-z]{2,19}(-[A-Z][a-z]{2,19})?" 
+                        autocomplete="family-name"
+                        required
+                        class="form-element">
+                </span>
+
+            </label>
+
+            <label class="label-item">
+                <span class="label-caption">Your email</span>
+                <span class="label-input">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="your_mail@mail.com" 
+                        autocomplete="email"
+                        required
+                        class="form-element">
+                </span>
+            </label>
+
+            <label class="label-item">
+                <span class="label-caption">Phone*</span>
+                <span class="label-input input-three-pcs">
+                    <input 
+                        type="tel" 
+                        name="phone-number-country-code" 
+                        size="3" 
+                        placeholder="+38" 
+                        maxlength="3" 
+                        minlength="3" 
+                        pattern="\+[0-9]{2}" 
+                        autocomplete="tel-country-code"
+                        required
+                        class="form-element">
+                    <input 
+                        type="tel" 
+                        name="phone-number-operator-code" 
+                        size="3" 
+                        placeholder="050" 
+                        maxlength="3" 
+                        minlength="3" 
+                        pattern="[0-9]{3}"
+                        autocomplete="tel-area-code" 
+                        required
+                        class="form-element">
+                    <input 
+                        type="tel" 
+                        name="phone-number" 
+                        size="7" 
+                        placeholder="1234567" 
+                        maxlength="7" 
+                        minlength="7" 
+                        pattern="[0-9]{7}" 
+                        autocomplete="tel-local"
+                        required
+                        class="form-element">
+                </span>
+            </label>
+
+            <label class="label-item">
+                <span class="label-caption">Message subject*</span>
+                <span class="label-input">
+                    <select name="message-subjects" class="form-element">
+                        <option value="Consultation">Consultation</option>
+                        <option value="Complaint">Complaint</option>
+                        <option value="Other" selected>Other</option>
+                    </select>
+                </span>
+            </label>
+
+            <label class="label-item">
+                <span class="label-caption">Message*</span>
+                <span class="label-input">
+                    <textarea 
+                        name="message-text" 
+                        rows="4" 
+                        placeholder="Enter your message..." 
+                        minlength="2"
+                        maxlength="1000"
+                        required
+                        class="form-element"></textarea>
+                </span>
+            </label>
+
+            <hr class="form-divider">
+
+            <button type="submit" class="subm-btn">SUBMIT FORM</button>
+
+        </form>
+
+    </main>
     
 </body>
 </html>
